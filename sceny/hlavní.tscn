@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://c32kijeai7cso"]
+
+[ext_resource type="Script" uid="uid://c47a2keg3emg6" path="res://sceny/hlavní.gd" id="1_4o767"]
+[ext_resource type="PackedScene" uid="uid://c50cacuvh6jw1" path="res://sceny/pozadí.tscn" id="1_xc7jy"]
+[ext_resource type="PackedScene" uid="uid://4u7bwihicmcq" path="res://sceny/zem.tscn" id="2_8i5r6"]
+[ext_resource type="PackedScene" uid="uid://wfoyn0k4r5t6" path="res://sceny/cyklista.tscn" id="3_8i5r6"]
+[ext_resource type="PackedScene" uid="uid://bf4g17jen0vka" path="res://sceny/hud.tscn" id="5_i8fv2"]
+[ext_resource type="PackedScene" uid="uid://biw265mlpvw7g" path="res://sceny/game_over.tscn" id="6_1r8e4"]
+
+[node name="Hlavní" type="Node" unique_id=928360311]
+script = ExtResource("1_4o767")
+
+[node name="Pozadí" parent="." unique_id=490779853 instance=ExtResource("1_xc7jy")]
+
+[node name="Zem" parent="." unique_id=1805001508 instance=ExtResource("2_8i5r6")]
+
+[node name="Cyklista" parent="." unique_id=984119555 instance=ExtResource("3_8i5r6")]
+position = Vector2(255, 1180)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=158691164]
+position = Vector2(1408, 768)
+
+[node name="Hud" parent="." unique_id=55314877 instance=ExtResource("5_i8fv2")]
+
+[node name="GameOver" parent="." unique_id=698462318 instance=ExtResource("6_1r8e4")]
+process_mode = 2

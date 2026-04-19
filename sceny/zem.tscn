@@ -1,0 +1,54 @@
+[gd_scene load_steps=3 format=3 uid="uid://4u7bwihicmcq"]
+
+[ext_resource type="Texture2D" uid="uid://cuf3jsc4yc4cg" path="res://zem_mensi.png" id="1_opj6o"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1uynx"]
+size = Vector2(5632, 104)
+
+[node name="Zem" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="Sprite2D1" type="Sprite2D" parent="Sprite2D"]
+position = Vector2(0, 1152)
+texture = ExtResource("1_opj6o")
+centered = false
+
+[node name="Sprite2D2" type="Sprite2D" parent="Sprite2D"]
+position = Vector2(704, 1152)
+texture = ExtResource("1_opj6o")
+centered = false
+
+[node name="Sprite2D3" type="Sprite2D" parent="Sprite2D"]
+position = Vector2(1408, 1152)
+texture = ExtResource("1_opj6o")
+centered = false
+
+[node name="Sprite2D4" type="Sprite2D" parent="Sprite2D"]
+position = Vector2(2112, 1152)
+texture = ExtResource("1_opj6o")
+centered = false
+
+[node name="Sprite2D5" type="Sprite2D" parent="Sprite2D"]
+position = Vector2(2816, 1152)
+texture = ExtResource("1_opj6o")
+centered = false
+
+[node name="Sprite2D6" type="Sprite2D" parent="Sprite2D"]
+position = Vector2(3520, 1152)
+texture = ExtResource("1_opj6o")
+centered = false
+
+[node name="Sprite2D7" type="Sprite2D" parent="Sprite2D"]
+position = Vector2(4224, 1152)
+texture = ExtResource("1_opj6o")
+centered = false
+
+[node name="Sprite2D8" type="Sprite2D" parent="Sprite2D"]
+position = Vector2(4928, 1152)
+texture = ExtResource("1_opj6o")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2816, 1484)
+shape = SubResource("RectangleShape2D_1uynx")

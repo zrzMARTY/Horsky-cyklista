@@ -1,0 +1,50 @@
+[gd_scene load_steps=8 format=3 uid="uid://ce6rposg6cqem"]
+
+[ext_resource type="Texture2D" uid="uid://cgwuokx0m60e7" path="res://ptak.png" id="1_hx621"]
+[ext_resource type="Script" uid="uid://cm6ck6xakqg6c" path="res://sceny/ptak.gd" id="1_oc68w"]
+[ext_resource type="Texture2D" uid="uid://b5bvgqso03ye4" path="res://ptak2.png" id="2_y0bi3"]
+[ext_resource type="Texture2D" uid="uid://bqw61no0d5ky4" path="res://ptak1.png" id="3_oc68w"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_l73p7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_hx621")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_y0bi3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_oc68w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_y0bi3")
+}],
+"loop": true,
+"name": &"Flying",
+"speed": 6.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0rtpa"]
+size = Vector2(270, 94)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ry7s4"]
+size = Vector2(221, 161)
+
+[node name="ptak" type="Area2D"]
+script = ExtResource("1_oc68w")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.15, 0.15)
+sprite_frames = SubResource("SpriteFrames_l73p7")
+animation = &"Flying"
+autoplay = "Flying"
+frame_progress = 0.32214016
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(3, -93)
+shape = SubResource("RectangleShape2D_0rtpa")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(6.5, 34.5)
+shape = SubResource("RectangleShape2D_ry7s4")
